@@ -19,9 +19,10 @@ public class DoOp {
                     }
                 } else if (args[1] == "*") {
                     return String.valueOf(first * last);
-
                 }
             }
+        } else if (args.length == 1) {
+            return args[0];
         }
         return "Error";
     }
