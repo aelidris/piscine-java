@@ -32,6 +32,7 @@ public class Capitalize {
                     }
                 }
                 writer.write(sb.toString().trim());
+                writer.newLine();
             }
         }
     }
