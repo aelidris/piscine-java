@@ -28,7 +28,7 @@ public class Capitalize {
                         sb.append(c);
                     }
                 }
-                writer.write(sb.toString().trim());
+                writer.write(sb.toString());
                 // writer.newLine();
             }
         }
