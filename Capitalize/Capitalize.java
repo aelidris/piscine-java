@@ -24,7 +24,7 @@ public class Capitalize {
                     if (c == ' ') {
                         capitalizeNext = true;
                         sb.append(c);
-                    } else if (capitalizeNext) {
+                    } else if (capitalizeNext && Character.isAlphabetic(c)) {
                         sb.append(Character.toUpperCase(c));
                         capitalizeNext = false;
                     } else {
