@@ -1,6 +1,4 @@
 public class Chifoumi {
-    private static final ChifoumiAction SCISSOR = null;
-
     public static ChifoumiAction getActionBeatenBy(ChifoumiAction chifoumiAction) {
         switch (chifoumiAction) {
             case ROCK:
