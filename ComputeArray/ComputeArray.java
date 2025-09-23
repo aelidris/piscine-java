@@ -3,15 +3,15 @@ public class ComputeArray {
         int[] result = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
-            int rem = array[i] % 3;
-            if (rem == 0) {
-                result[i] = array[i] * 5;
-            } else if (rem == 1 || rem == -2) { 
-                result[i] = array[i] + 7;
-            } else if (rem == 2 || rem == -1) { 
-                result[i] = array[i];
+            int value = array[i];
+            int remainder = value % 3;
+            if (remainder == 0) {
+                result[i] = value * 5;
+            } else if (remainder == 1) {
+                result[i] = value + 7;
+            } else {
+                result[i] = value;
             }
-
         }
 
         return result;
