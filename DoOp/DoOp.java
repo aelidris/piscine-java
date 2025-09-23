@@ -18,6 +18,6 @@ public class DoOp {
                 }
             }
         }
-        return "it depend on the input.";
+        return "0";
     }
 }
