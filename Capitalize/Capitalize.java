@@ -15,9 +15,6 @@ public class Capitalize {
             String line;
             while ((line = reader.readLine()) != null) {
                 line = line.trim().replaceAll("\\s+", " ");
-                if (line.isEmpty()) {
-                    continue;
-                }
                 StringBuilder sb = new StringBuilder();
                 boolean capitalizeNext = true;
                 for (char c : line.toCharArray()) {
@@ -32,7 +29,7 @@ public class Capitalize {
                     }
                 }
                 writer.write(sb.toString().trim());
-                writer.newLine();
+                // writer.newLine();
             }
         }
     }
