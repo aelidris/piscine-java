@@ -17,12 +17,16 @@ public class DoOp {
                     } else {
                         return String.valueOf(first % last);
                     }
+                } else if (args[1] == "/") {
+                    if (last == 0) {
+                        return "Error";
+                    } else {
+                        return String.valueOf(first / last);
+                    }
                 } else if (args[1] == "*") {
                     return String.valueOf(first * last);
                 }
             }
-        } else if (args.length == 1) {
-            return args[0];
         }
         return "Error";
     }
