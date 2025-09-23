@@ -20,6 +20,6 @@ public class DoOp {
                 }
             }
         }
-        return "0";
+        return "Error";
     }
 }
