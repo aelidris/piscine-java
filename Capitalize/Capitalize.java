@@ -1,5 +1,3 @@
-package Capitalize;
-
 import java.io.*;
 
 public class Capitalize {
