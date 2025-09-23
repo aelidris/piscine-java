@@ -31,7 +31,7 @@ public class Capitalize {
                         sb.append(c);
                     }
                 }
-                writer.write(sb.toString());
+                writer.write(sb.toString().trim());
             }
         }
     }
