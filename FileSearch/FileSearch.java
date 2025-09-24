@@ -3,7 +3,7 @@ public class FileSearch {
     public static String searchFile(String fileName) {
         File root = new File("documents");
         String result = searchRecursive(root, fileName);
-        return result != null ? result : "File not found";
+        return result != null ? result : null;
     }
     public static String searchRecursive(File dir, String fileName) {
         if (!dir.isDirectory() || !dir.exists()) {
