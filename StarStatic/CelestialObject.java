@@ -15,19 +15,6 @@ public class CelestialObject {
         this.z = z;
     }
 
-    public String getName() {
-        return name;
-    }
-    public double getX() {
-        return this.x;
-    }
-    public double getY() {
-        return y;
-    }
-    public double getZ() {
-        return z;
-    }
-
     public static double getDistanceBetween(CelestialObject a, CelestialObject b) {
         double dx = a.x - b.x;
         double dy = a.y - b.y;
