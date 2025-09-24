@@ -13,8 +13,12 @@ public class FileManager {
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
             String line;
             while ((line = reader.readLine()) != null) {
-                sb.append(line);
+                sb.append(line).append(System.lineSeparator());
             }
+        }
+        // Remove the last line separator if file is not empty
+        if (sb.length() > 0) {
+            sb.setLength(sb.length() - System.lineSeparator().length());
         }
         return sb.toString();
     }
