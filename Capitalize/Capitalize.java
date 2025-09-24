@@ -34,12 +34,13 @@ public class Capitalize {
                         }
                         capitalizeNext = false;
                     } else {
-                        sb.append(c);
+                        sb.append(Character.toLowerCase(c));
                     }
                 }
                 // System.out.println("DEBUG: line = [" + sb + "]");
                 writer.write(sb.toString());
-                writer.newLine();
+                // writer.newLine();
+                
             }
         }
     }
