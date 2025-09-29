@@ -62,7 +62,7 @@ public class Character {
                 sb.append(" - ").append(character.toString()).append("\n");
             }
         }
-        return sb.append(separator).append("\n").toString();
+        return sb.append(separator).toString();
     }
 
     public static Character fight(Character fighter1, Character fighter2) {

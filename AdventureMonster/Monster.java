@@ -15,9 +15,9 @@ public class Monster extends Character {
         String baseStatus = super.toString();
 
         if (this.getCurrentHealth() <= 0) {
-            return baseStatus.replace(" : KO", " is a monster and is dead\n");
+            return baseStatus.replace(" : KO", " is a monster and is dead");
         } else {
-            return this.getName() + " is a monster with " + this.getCurrentHealth() + " HP\n";
+            return this.getName() + " is a monster with " + this.getCurrentHealth() + " HP";
         }
     }
 }
