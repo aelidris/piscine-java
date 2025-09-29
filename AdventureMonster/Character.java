@@ -29,7 +29,7 @@ public class Character {
     
 
     public void takeDamage(int damage) {
-        int newHealth = currentHealth - damage;
+        int newHealth = this.currentHealth - damage;
         if (newHealth < 0) {
             newHealth = 0;
         }
@@ -46,11 +46,10 @@ public class Character {
         if (currentHealth == 0) {
             return name + " : KO";
         }
-        return name + " : " + currentHealth + "/" + maxHealth;
+        return name + " : " + this.currentHealth + "/" + maxHealth;
     }
 
-    
-    public static String printStatus() {
+     public static String printStatus() {
         String separator = "------------------------------------------";
         StringBuilder sb = new StringBuilder(separator).append("\n");
 
@@ -62,7 +61,7 @@ public class Character {
                 sb.append(" - ").append(character.toString()).append("\n");
             }
         }
-        return sb.append(separator).toString();
+        return sb.append(separator).append("\n").toString();
     }
 
     public static Character fight(Character fighter1, Character fighter2) {
