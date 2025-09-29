@@ -49,7 +49,8 @@ public class Character {
         return name + " : " + currentHealth + "/" + maxHealth;
     }
 
-     public static String printStatus() {
+    
+    public static String printStatus() {
         String separator = "------------------------------------------";
         StringBuilder sb = new StringBuilder(separator).append("\n");
 
