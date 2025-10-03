@@ -8,7 +8,7 @@ public class ListSearchIndex {
                 return i;
             }
         }
-        return -1;
+        return null;
     }
 
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
@@ -17,7 +17,7 @@ public class ListSearchIndex {
                 return i;
             }
         }
-        return -1;
+        return null;
     }
 
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
