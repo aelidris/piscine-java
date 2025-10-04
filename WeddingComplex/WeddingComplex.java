@@ -26,7 +26,9 @@ public class WeddingComplex {
                 engagedTo.put(woman, man);
             } else {
                 String currentMan = engagedTo.get(woman);
-                if (prefs.indexOf(man) < prefs.indexOf(currentMan)) {
+                List<String> prefs2 = second.get(woman);
+
+                if (prefs2.indexOf(man) < prefs2.indexOf(currentMan)) {
                     engagements.put(man, woman);
                     engagedTo.put(woman, man);
                     freeMen.add(currentMan);
