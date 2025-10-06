@@ -10,14 +10,14 @@ public class DifferenceBetweenDate {
         if(localTime1 == null || localTime2 == null) {
             return null;
         }
-        return Duration.between(localTime1, localTime2);
+        return localTime1.isBefore(localTime2) ? Duration.between(localTime1, localTime2) : Duration.between(localTime2, localTime1);
     }
 
     public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
         if (date1 == null || date2 == null) {
             return null;
         }
-        return Period.between(date1, date2);
+        return date1.isBefore(date2) ? Period.between(date1, date2) : Period.between(date2, date1);
     }
 
     public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1, LocalDateTime dateTime2) {
