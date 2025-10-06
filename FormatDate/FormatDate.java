@@ -34,8 +34,11 @@ public class FormatDate {
         if(time == null) {
             return null;
         }
+        // System.out.println(time);
+        int numberOfS = time.toString().split("\\.")[1].length();
+        String s = "S".repeat(numberOfS);
         // Format: "16:18:56.008495847"
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss."+s);
         return formatter.format(time);
     }
 }
