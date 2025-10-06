@@ -40,7 +40,7 @@ public class FormatDate {
             int numberOfS = time.toString().split("\\.")[1].length();
             s = "S".repeat(numberOfS);
         } else {
-            s = "SSSSSSSSS";
+            s = "";
         }
         // Format: "16:18:56.008495847"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss."+s);
