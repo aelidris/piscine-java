@@ -7,6 +7,9 @@ import java.util.Locale;
 public class FormatDate {
     
     public static String formatToFullText(LocalDateTime dateTime) {
+        if (dateTime == null) {
+            return null;
+        }
         // Format: "Le 22 août de l'an 2021 à 13h25m et 46s"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
             "'Le 'dd MMMM 'de l''an 'yyyy 'à 'HH'h'mm'm et 'ss's'",
@@ -16,6 +19,9 @@ public class FormatDate {
     }
     
     public static String formatSimple(LocalDate date) {
+        if(date == null) {
+            return null;
+        }
         // Format: "febbraio 13 22"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(
             "MMMM dd yy",
@@ -25,6 +31,9 @@ public class FormatDate {
     }
     
     public static String formatIso(LocalTime time) {
+        if(time == null) {
+            return null;
+        }
         // Format: "16:18:56.008495847"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSSSSSSSS");
         return formatter.format(time);
