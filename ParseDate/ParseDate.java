@@ -7,11 +7,17 @@ import java.util.Locale;
 public class ParseDate {
     
     public static LocalDateTime parseIsoFormat(String stringDate) {
+        if(stringDate == null || stringDate.isEmpty()) {
+            throw new IllegalArgumentException("Input string cannot be null or empty");
+        }
         DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
         return LocalDateTime.parse(stringDate, formatter);
     }
     
     public static LocalDate parseFullTextFormat(String stringDate) {
+        if(stringDate == null || stringDate.isEmpty()) {
+            throw new IllegalArgumentException("Input string cannot be null or empty");
+        }
         String[] words = stringDate.split(" ");
         StringBuilder capitalized = new StringBuilder();
         for (String word : words) {
@@ -27,6 +33,9 @@ public class ParseDate {
     }
     
     public static LocalTime parseTimeFormat(String stringDate) {
+        if(stringDate == null || stringDate.isEmpty()) {
+            throw new IllegalArgumentException("Input string cannot be null or empty");
+        }
         String[] parts = stringDate.split(",");
         
         String hoursPart = parts[0].trim();
