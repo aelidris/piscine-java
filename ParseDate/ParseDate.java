@@ -8,7 +8,7 @@ public class ParseDate {
     
     public static LocalDateTime parseIsoFormat(String stringDate) {
         if(stringDate == null || stringDate.isEmpty()) {
-            throw new IllegalArgumentException("Input string cannot be null or empty");
+            return null;
         }
         DateTimeFormatter formatter = DateTimeFormatter.ISO_LOCAL_DATE_TIME;
         return LocalDateTime.parse(stringDate, formatter);
@@ -16,7 +16,7 @@ public class ParseDate {
     
     public static LocalDate parseFullTextFormat(String stringDate) {
         if(stringDate == null || stringDate.isEmpty()) {
-            throw new IllegalArgumentException("Input string cannot be null or empty");
+            return null;
         }
         String[] words = stringDate.split(" ");
         StringBuilder capitalized = new StringBuilder();
@@ -34,7 +34,7 @@ public class ParseDate {
     
     public static LocalTime parseTimeFormat(String stringDate) {
         if(stringDate == null || stringDate.isEmpty()) {
-            throw new IllegalArgumentException("Input string cannot be null or empty");
+            return null;
         }
         String[] parts = stringDate.split(",");
         
