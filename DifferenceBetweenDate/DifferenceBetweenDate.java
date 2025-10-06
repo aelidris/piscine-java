@@ -15,7 +15,8 @@ public class DifferenceBetweenDate {
     }
 
     public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1, LocalDateTime dateTime2) {
-        return Duration.between(dateTime1, dateTime2).toHours();
+
+        return dateTime1.isBefore(dateTime2) ? Duration.between(dateTime1, dateTime2).toHours(): Duration.between(dateTime2, dateTime1).toHours();
     }
 
 }
