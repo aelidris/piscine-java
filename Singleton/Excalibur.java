@@ -1,9 +1,9 @@
 public class Excalibur {
+
     private static Excalibur instance;
 
     private String name;
 
-    private static Excalibur INSTANCE;
 
     private Excalibur(String name) {
         this.name = name;
@@ -17,8 +17,7 @@ public class Excalibur {
     }
 
     public String getName() {
-        return "Sword";
+        return this.name;
     }
-
-   
+ 
 }
